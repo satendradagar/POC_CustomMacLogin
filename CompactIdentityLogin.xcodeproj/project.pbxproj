@@ -16,15 +16,15 @@
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		9A206778242B4C9300E0ABEE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A206776242A6BC800E0ABEE /* WebKit.framework */; };
+		9A4B55C6242DE38A00A3ED5A /* SSHyperLinkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B55C5242DE38A00A3ED5A /* SSHyperLinkButton.m */; };
+		9ADD5AB22430C548004A66DA /* TaskUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADD5AB12430C548004A66DA /* TaskUtility.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		32DBCF630370AF2F00C91783 /* NameAndPassword_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameAndPassword_Prefix.pch; sourceTree = "<group>"; };
-		4877FEAC0A78129100487439 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/NameAndPassword.nib; sourceTree = "<group>"; };
+		32DBCF630370AF2F00C91783 /* CompactIdentityLogin_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompactIdentityLogin_Prefix.pch; sourceTree = "<group>"; };
 		4895C5180A780E0D00ABC00C /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4895C5190A780E0D00ABC00C /* plugin-objc.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "plugin-objc.h"; sourceTree = "<group>"; };
 		4895C51A0A780E0D00ABC00C /* plugin-objc.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = "plugin-objc.m"; sourceTree = "<group>"; };
@@ -34,9 +34,15 @@
 		4895C5200A780E1800ABC00C /* NameAndPasswordPlugin.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NameAndPasswordPlugin.h; sourceTree = "<group>"; };
 		4895C52B0A780E8800ABC00C /* SecurityInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurityInterface.framework; path = /System/Library/Frameworks/SecurityInterface.framework; sourceTree = "<absolute>"; };
 		4895C5680A78111400ABC00C /* ReadMe */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = ReadMe; sourceTree = "<group>"; };
-		8D5B49B6048680CD000E48DA /* NameAndPassword.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NameAndPassword.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D5B49B6048680CD000E48DA /* CompactIdentityLogin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompactIdentityLogin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A160AAD2433399900E56DE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = Base.lproj/NameAndPassword.nib; sourceTree = "<group>"; };
+		9A160AAE2433399D00E56DE3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9A206776242A6BC800E0ABEE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
+		9A4B55C4242DE38A00A3ED5A /* SSHyperLinkButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSHyperLinkButton.h; sourceTree = "<group>"; };
+		9A4B55C5242DE38A00A3ED5A /* SSHyperLinkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSHyperLinkButton.m; sourceTree = "<group>"; };
+		9ADD5AB02430C548004A66DA /* TaskUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskUtility.h; sourceTree = "<group>"; };
+		9ADD5AB12430C548004A66DA /* TaskUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskUtility.m; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +100,9 @@
 				4895C51E0A780E1800ABC00C /* AuthPlugin.m */,
 				4895C5200A780E1800ABC00C /* NameAndPasswordPlugin.h */,
 				4895C51F0A780E1800ABC00C /* NameAndPasswordPlugin.m */,
+				9ADD5AB02430C548004A66DA /* TaskUtility.h */,
+				9ADD5AB12430C548004A66DA /* TaskUtility.m */,
+				9A4B55C3242DE37900A3ED5A /* CustomUI */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -120,7 +129,7 @@
 		19C28FB8FE9D52D311CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D5B49B6048680CD000E48DA /* NameAndPassword.bundle */,
+				8D5B49B6048680CD000E48DA /* CompactIdentityLogin.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,7 +140,7 @@
 				4895C5180A780E0D00ABC00C /* main.m */,
 				4895C5190A780E0D00ABC00C /* plugin-objc.h */,
 				4895C51A0A780E0D00ABC00C /* plugin-objc.m */,
-				32DBCF630370AF2F00C91783 /* NameAndPassword_Prefix.pch */,
+				32DBCF630370AF2F00C91783 /* CompactIdentityLogin_Prefix.pch */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -144,12 +153,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9A4B55C3242DE37900A3ED5A /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				9A4B55C4242DE38A00A3ED5A /* SSHyperLinkButton.h */,
+				9A4B55C5242DE38A00A3ED5A /* SSHyperLinkButton.m */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8D5B49AC048680CD000E48DA /* NameAndPassword */ = {
+		8D5B49AC048680CD000E48DA /* CompactIdentityLogin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "NameAndPassword" */;
+			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "CompactIdentityLogin" */;
 			buildPhases = (
 				8D5B49AF048680CD000E48DA /* Resources */,
 				8D5B49B1048680CD000E48DA /* Sources */,
@@ -159,10 +177,10 @@
 			);
 			dependencies = (
 			);
-			name = NameAndPassword;
+			name = CompactIdentityLogin;
 			productInstallPath = "$(HOME)/Library/Bundles";
 			productName = NameAndPassword;
-			productReference = 8D5B49B6048680CD000E48DA /* NameAndPassword.bundle */;
+			productReference = 8D5B49B6048680CD000E48DA /* CompactIdentityLogin.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -171,20 +189,21 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 1130;
 			};
-			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "NameAndPassword" */;
+			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "CompactIdentityLogin" */;
 			compatibilityVersion = "Xcode 3.0";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = 089C166AFE841209C02AAC07 /* NameAndPassword */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D5B49AC048680CD000E48DA /* NameAndPassword */,
+				8D5B49AC048680CD000E48DA /* CompactIdentityLogin */,
 			);
 		};
 /* End PBXProject section */
@@ -207,7 +226,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4895C51B0A780E0D00ABC00C /* main.m in Sources */,
+				9ADD5AB22430C548004A66DA /* TaskUtility.m in Sources */,
 				4895C51C0A780E0D00ABC00C /* plugin-objc.m in Sources */,
+				9A4B55C6242DE38A00A3ED5A /* SSHyperLinkButton.m in Sources */,
 				4895C5210A780E1800ABC00C /* AuthPlugin.m in Sources */,
 				4895C5220A780E1800ABC00C /* NameAndPasswordPlugin.m in Sources */,
 			);
@@ -219,7 +240,7 @@
 		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				089C167EFE841241C02AAC07 /* English */,
+				9A160AAE2433399D00E56DE3 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -227,7 +248,7 @@
 		4877FEAB0A78129100487439 /* NameAndPassword.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4877FEAC0A78129100487439 /* English */,
+				9A160AAD2433399900E56DE3 /* Base */,
 			);
 			name = NameAndPassword.nib;
 			sourceTree = "<group>";
@@ -238,19 +259,19 @@
 		1DEB913B08733D840010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = NameAndPassword_Prefix.pch;
+				GCC_PREFIX_HEADER = CompactIdentityLogin_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_NAME = NameAndPassword;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apple.securityAgentPlugin.CompactIdentityLogin;
+				PRODUCT_NAME = CompactIdentityLogin;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = bundle;
 				ZERO_LINK = YES;
@@ -260,16 +281,17 @@
 		1DEB913C08733D840010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = NameAndPassword_Prefix.pch;
+				GCC_PREFIX_HEADER = CompactIdentityLogin_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_NAME = NameAndPassword;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apple.securityAgentPlugin.CompactIdentityLogin;
+				PRODUCT_NAME = CompactIdentityLogin;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = bundle;
 			};
@@ -278,13 +300,34 @@
 		1DEB913F08733D840010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 			};
 			name = Debug;
@@ -292,9 +335,32 @@
 		1DEB914008733D840010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
 				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 			};
 			name = Release;
@@ -302,7 +368,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "NameAndPassword" */ = {
+		1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "CompactIdentityLogin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB913B08733D840010E9CD /* Debug */,
@@ -311,7 +377,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "NameAndPassword" */ = {
+		1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "CompactIdentityLogin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB913F08733D840010E9CD /* Debug */,

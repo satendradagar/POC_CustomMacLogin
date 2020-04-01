@@ -53,10 +53,14 @@ Copyright � 2006 Apple Computer, Inc., All Rights Reserved
 
 @implementation EXNameAndPassword
 {
-    NSWindow *overlayWindow;
 
 }
 
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    [self setButton:SFButtonTypeOK enabled:NO];
+
+}
 - (void)buttonPressed:(SFButtonType)inButtonType
 {
     NSString *userNameString;
@@ -104,7 +108,8 @@ Copyright � 2006 Apple Computer, Inc., All Rights Reserved
 {
 	// return the appropriate view depending on whether or not identity and credentials
 	// or just credentials are being asked for
-	if (mUseIPView)
+
+    if (mUseIPView)
 		return mNameTextField;
 	else
 		return mPPasswordSecureTextField;
@@ -113,10 +118,9 @@ Copyright � 2006 Apple Computer, Inc., All Rights Reserved
 - (NSView *)firstResponderView
 {
 	NSView					*view;
-	
 	// return the appropriate view depending on whether or not identity and credentials
 	// or just credentials are being asked for
-	if (mUseIPView)
+    if (mUseIPView)
 	{
 		// if the name field doesn't already has a user name, then return the name text field view
 		// otherwise, return the password secure text field
@@ -141,7 +145,7 @@ Copyright � 2006 Apple Computer, Inc., All Rights Reserved
 {
 	// return the appropriate view depending on whether or not identity and credentials
 	// or just credentials are being asked for
-	if (mUseIPView)
+    if (mUseIPView)
 		return mIPPasswordSecureTextField;
 	else
 		return mPPasswordSecureTextField;
@@ -163,6 +167,8 @@ Copyright � 2006 Apple Computer, Inc., All Rights Reserved
 	{
 		[mNameTextField setStringValue: mUserName];
 	}
+    [self setButton:SFButtonTypeOK enabled:NO];
+
 }
 
 - (NSView*)viewForType:(SFViewType)inType
@@ -202,55 +208,28 @@ Copyright � 2006 Apple Computer, Inc., All Rights Reserved
 }
 
 -(IBAction)didClickedLink:(id)sender{
-//    [[NSWorkspace sharedWorkspace] openURL:@"https://developer.apple.com"];
     [self attachWebView];
 }
 
--(IBAction)presentNewWindow:(NSButton *)sender{
-    if (nil != overlayWindow) {
-        [mPasswordView.window removeChildWindow:overlayWindow];
-        overlayWindow = nil;
-    }
-    CGRect wRect = mPasswordView.window.contentView.bounds;
-    NSView *contentView  = mPasswordView.window.contentView;
-    CGRect cRect = contentView.frame;
-
-    CGRect rect = CGRectMake(wRect.origin.x, wRect.origin.y, cRect.size.width, cRect.size.height);
-   overlayWindow = [[NSWindow alloc]initWithContentRect:rect
-                                                         styleMask:NSWindowStyleMaskBorderless
-                                                           backing:NSBackingStoreBuffered
-                                                             defer:NO];
-    overlayWindow.backgroundColor = [NSColor redColor];
-    [overlayWindow setOpaque:NO];
-    overlayWindow.alphaValue = 1.0f;
-
-    [mPasswordView.window addChildWindow:overlayWindow ordered:NSWindowAbove];
-    WKWebViewConfiguration *theConfiguration = [[WKWebViewConfiguration alloc] init];
-        WKWebView *webView = [[WKWebView alloc] initWithFrame:self->mPasswordView.frame configuration:theConfiguration];
-    ////    webView.navigationDelegate = self;
-//        [mPasswordView.window addChildWindow:mWindowToShow ordered:NSWindowAbove];
-
-        NSURL *nsurl=[NSURL URLWithString:@"https://www.google.com/?client=safari"];
-        NSURLRequest *nsrequest=[NSURLRequest requestWithURL:nsurl];
-    [overlayWindow.contentView addSubview:webView];
-    [overlayWindow.contentView addSubview:sender];
-    webView.frame = overlayWindow.contentView.bounds;
-        [webView loadRequest:nsrequest];
-    //    [self->mPasswordView addSubview:webView];
-
+-(IBAction)didClickedOK:(id)sender{
+    [self buttonPressed:SFButtonTypeOK];
 }
 
 -(void) attachWebView{
-//    WKWebViewConfiguration *theConfiguration = [[WKWebViewConfiguration alloc] init];
-//    WKWebView *webView = [[WKWebView alloc] initWithFrame:self->mPasswordView.frame configuration:theConfiguration];
-////    webView.navigationDelegate = self;
-    [mPasswordView.window addChildWindow:mWindowToShow ordered:NSWindowAbove];
+    NSView *view = nil;
+    if (mUseIPView)
+        view =  mIdentityAndPasswordView;
+    else
+        view =  mPasswordView;
 
-    NSURL *nsurl=[NSURL URLWithString:@"http://www.apple.com"];
+    [view.window addChildWindow:mWindowToShow ordered:NSWindowAbove];
+
+//    NSURL *nsurl=[NSURL URLWithString:@"http://www.apple.com"];
+    NSURL *nsurl=[NSURL URLWithString:@"https://compact-29.compactidentityqa2.com/CIDSaas/default/user/resetpassword"];
+
     NSURLRequest *nsrequest=[NSURLRequest requestWithURL:nsurl];
     [mWebView loadRequest:nsrequest];
-//    [self->mPasswordView addSubview:webView];
-//
+    [mWindowToShow makeKeyAndOrderFront:nil];
 }
 
 

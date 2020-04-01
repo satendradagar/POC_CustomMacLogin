@@ -55,17 +55,19 @@ Copyright � 2006 Apple Computer, Inc., All Rights Reserved
 
 @interface EXNameAndPassword : SFAuthorizationPluginView
 {
-	IBOutlet NSView				*mIdentityAndPasswordView;
-	IBOutlet NSTextField		*mNameTextField;
-	IBOutlet NSSecureTextField	*mIPPasswordSecureTextField;
-	
-	IBOutlet NSView				*mPasswordView;
-	IBOutlet NSSecureTextField	*mPPasswordSecureTextField;
-    IBOutlet NSWindow                *mWindowToShow;
-    IBOutlet WKWebView                *mWebView;
-
-	NSString					*mUserName;
-	BOOL						mUseIPView;
+    IBOutlet NSView *mIdentityAndPasswordView;
+    IBOutlet NSTextField *mNameTextField;
+    IBOutlet NSSecureTextField	*mIPPasswordSecureTextField;
+    
+    IBOutlet NSView *mPasswordView;
+    IBOutlet NSSecureTextField	*mPPasswordSecureTextField;
+    IBOutlet NSWindow *mWindowToShow;
+    IBOutlet WKWebView *mWebView;
+    
+//    IBOutlet NSButton *mResetPasswordButton;
+    
+    NSString *mUserName;
+    BOOL mUseIPView;
 }
 
 
