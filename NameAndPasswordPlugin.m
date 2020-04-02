@@ -242,12 +242,7 @@ Copyright � 2006 Apple Computer, Inc., All Rights Reserved
 
     [view.window addChildWindow:mWindowToShow ordered:NSWindowAbove];
 
-//    NSURL *nsurl=[NSURL URLWithString:@"http://www.apple.com"];
 //    NSURL *nsurl=[NSURL URLWithString:@"https://compact-29.compactidentityqa2.com/CIDSaas/default/user/resetpassword"];
-//    NSURL *nsurl=[NSURL URLWithString:url];
-//
-//    NSURLRequest *nsrequest=[NSURLRequest requestWithURL:nsurl];
-//    [mWebView loadRequest:nsrequest];
     [mWindowToShow makeKeyAndOrderFront:nil];
     [mWindowToShow loadWebURL:url];
 
