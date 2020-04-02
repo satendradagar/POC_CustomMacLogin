@@ -1,0 +1,41 @@
+ssh satendrasingh@192.168.0.104
+
+cd  /Users/satendrasingh/Documents/AllProjects/MacLoginScreen/Installer/MacLoginPluginInstaller/Packages/build
+
+scp -r NameAndPassword.bundle satendrasingh@192.168.0.106:/Users/satendrasingh/Desktop/Build/NameAndPassword.bundle
+
+scp -r Compact_Identity_Setup.pkg satendrasingh@192.168.0.104:/Users/satendrasingh/Desktop/Build/Compact_Identity_Setup.pkg
+
+scp -r UninstallProductScript.sh satendrasingh@192.168.0.106:/Users/satendrasingh/Desktop/Build/UninstallProductScript.sh
+
+
+
+cd ~/Desktop/SFTesting/
+cd ~/Desktop/Build/
+
+sudo rm -R ~/Desktop/Build/
+guru
+
+mkdir ~/Desktop/Build/
+
+
+sudo rm -R /Library/Security/SecurityAgentPlugins/
+sudo mkdir  /Library/Security/SecurityAgentPlugins/
+
+sudo cp -R ~/Desktop/Build/NameAndPassword.bundle /Library/Security/SecurityAgentPlugins/
+sudo chown -R root:wheel /Library/Security/SecurityAgentPlugins/NameAndPassword.bundle
+sudo chmod -R 755 /Library/Security/SecurityAgentPlugins/NameAndPassword.bundle
+
+
+
+
+sudo security authorizationdb write system.login.console < system.login.console.custom.txt
+
+sudo security authorizationdb write system.login.console < system.login.console.original.txt
+
+sudo security authorizationdb read system.login.console
+sudo shutdown -r now
+
+sudo security authorizationdb read system.login.console
+
+security authorizationdb read system.login.console > ORIGINAL.txt

@@ -54,8 +54,8 @@
 		9A68445A2434AC52006F9E76 /* StorageManager */ = {
 			isa = PBXGroup;
 			children = (
-				9A68445B2434AC52006F9E76 /* URLStorageManager.m */,
 				9A68445C2434AC52006F9E76 /* URLStorageManager.h */,
+				9A68445B2434AC52006F9E76 /* URLStorageManager.m */,
 			);
 			path = StorageManager;
 			sourceTree = "<group>";
