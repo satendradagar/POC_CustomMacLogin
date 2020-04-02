@@ -12,29 +12,12 @@
 
 + (BOOL)validateUrlString:(NSString*)urlString
 {
+    // "(http|https)://((\\w)*|([0-9]*)|([-|_])*)+([\\.|/]((\\w)*|([0-9]*)|([-|_])*)+)+(/)?(\\?.*)?"
+
     NSString *urlRegEx =
        @"(http|https)://((\\w)*|([0-9]*)|([-|_])*)+([\\.|/]((\\w)*|([0-9]*)|([-|_])*))+";
        NSPredicate *urlTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", urlRegEx];
        return [urlTest evaluateWithObject:urlString];
-    
-//    if (!urlString)
-//    {
-//        return NO;
-//    }
-//
-//    NSDataDetector *linkDetector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeLink error:nil];
-//
-//    NSRange urlStringRange = NSMakeRange(0, [urlString length]);
-//    NSMatchingOptions matchingOptions = 0;
-//
-//    if (1 != [linkDetector numberOfMatchesInString:urlString options:matchingOptions range:urlStringRange])
-//    {
-//        return NO;
-//    }
-//
-//    NSTextCheckingResult *checkingResult = [linkDetector firstMatchInString:urlString options:matchingOptions range:urlStringRange];
-//
-//    return checkingResult.resultType == NSTextCheckingTypeLink && NSEqualRanges(checkingResult.range, urlStringRange);
 }
 
 + (BOOL)validateTitle:(NSString*)title
