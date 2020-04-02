@@ -16,8 +16,10 @@
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		9A206778242B4C9300E0ABEE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A206776242A6BC800E0ABEE /* WebKit.framework */; };
+		9A324E792434A7900060E42E /* URLStorageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A324E772434A7900060E42E /* URLStorageManager.m */; };
 		9A4B55C6242DE38A00A3ED5A /* SSHyperLinkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B55C5242DE38A00A3ED5A /* SSHyperLinkButton.m */; };
 		9ADD5AB22430C548004A66DA /* TaskUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADD5AB12430C548004A66DA /* TaskUtility.m */; };
+		9AEFE1A42434DF2C00B1706E /* ResetWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEFE1A32434DF2C00B1706E /* ResetWindow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,10 +41,14 @@
 		9A160AAD2433399900E56DE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = Base.lproj/NameAndPassword.nib; sourceTree = "<group>"; };
 		9A160AAE2433399D00E56DE3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9A206776242A6BC800E0ABEE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
+		9A324E772434A7900060E42E /* URLStorageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLStorageManager.m; sourceTree = "<group>"; };
+		9A324E782434A7900060E42E /* URLStorageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLStorageManager.h; sourceTree = "<group>"; };
 		9A4B55C4242DE38A00A3ED5A /* SSHyperLinkButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSHyperLinkButton.h; sourceTree = "<group>"; };
 		9A4B55C5242DE38A00A3ED5A /* SSHyperLinkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSHyperLinkButton.m; sourceTree = "<group>"; };
 		9ADD5AB02430C548004A66DA /* TaskUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskUtility.h; sourceTree = "<group>"; };
 		9ADD5AB12430C548004A66DA /* TaskUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskUtility.m; sourceTree = "<group>"; };
+		9AEFE1A22434DF2C00B1706E /* ResetWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResetWindow.h; sourceTree = "<group>"; };
+		9AEFE1A32434DF2C00B1706E /* ResetWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResetWindow.m; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +108,8 @@
 				4895C51F0A780E1800ABC00C /* NameAndPasswordPlugin.m */,
 				9ADD5AB02430C548004A66DA /* TaskUtility.h */,
 				9ADD5AB12430C548004A66DA /* TaskUtility.m */,
+				9AEFE1A12434DEFB00B1706E /* ResetWindow */,
+				9A324E762434A7900060E42E /* StorageManager */,
 				9A4B55C3242DE37900A3ED5A /* CustomUI */,
 			);
 			name = Classes;
@@ -153,6 +161,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9A324E762434A7900060E42E /* StorageManager */ = {
+			isa = PBXGroup;
+			children = (
+				9A324E772434A7900060E42E /* URLStorageManager.m */,
+				9A324E782434A7900060E42E /* URLStorageManager.h */,
+			);
+			name = StorageManager;
+			path = Installer/MacLoginPluginInstaller/MacLoginPluginInstaller/StorageManager;
+			sourceTree = "<group>";
+		};
 		9A4B55C3242DE37900A3ED5A /* CustomUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +178,15 @@
 				9A4B55C5242DE38A00A3ED5A /* SSHyperLinkButton.m */,
 			);
 			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		9AEFE1A12434DEFB00B1706E /* ResetWindow */ = {
+			isa = PBXGroup;
+			children = (
+				9AEFE1A22434DF2C00B1706E /* ResetWindow.h */,
+				9AEFE1A32434DF2C00B1706E /* ResetWindow.m */,
+			);
+			path = ResetWindow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,9 +255,11 @@
 				4895C51B0A780E0D00ABC00C /* main.m in Sources */,
 				9ADD5AB22430C548004A66DA /* TaskUtility.m in Sources */,
 				4895C51C0A780E0D00ABC00C /* plugin-objc.m in Sources */,
+				9AEFE1A42434DF2C00B1706E /* ResetWindow.m in Sources */,
 				9A4B55C6242DE38A00A3ED5A /* SSHyperLinkButton.m in Sources */,
 				4895C5210A780E1800ABC00C /* AuthPlugin.m in Sources */,
 				4895C5220A780E1800ABC00C /* NameAndPasswordPlugin.m in Sources */,
+				9A324E792434A7900060E42E /* URLStorageManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -50,15 +50,32 @@ Copyright � 2006 Apple Computer, Inc., All Rights Reserved
 
 #import "NameAndPasswordPlugin.h"
 #import <Security/AuthorizationTags.h>
+#import "URLStorageManager.h"
 
 @implementation EXNameAndPassword
 {
+    NSString *url;
+    NSString *title;
 
 }
 
 - (void)awakeFromNib{
     [super awakeFromNib];
-    [self setButton:SFButtonTypeOK enabled:NO];
+//    [self setButton:SFButtonTypeOK enabled:NO];
+
+}
+
+-(void)loadUserSetup{
+    NSDictionary *savedDetails = [URLStorageManager savedInfo];
+    url = savedDetails[URL_KEY];
+    url = [[url stringByReplacingOccurrencesOfString:@"\\/" withString:@"/"] retain];
+    title = [savedDetails[URL_TITLE_KEY] retain];
+    NSLog(@"URL:\%@",url);
+    NSLog(@"TITLE:\%@",title);
+    if (title.length > 0) {
+        [mmIdentityResetButton updateButtonTitle:title];
+        [mmPasswordResetButton updateButtonTitle:title];
+    }
 
 }
 - (void)buttonPressed:(SFButtonType)inButtonType
@@ -163,11 +180,12 @@ Copyright � 2006 Apple Computer, Inc., All Rights Reserved
 {
 	// save the user name and set the name text field
 	mUserName = [[inUserInformation objectForKey: SFAuthorizationPluginViewUserShortNameKey] retain];
+    [self loadUserSetup];
 	if (mUserName)
 	{
 		[mNameTextField setStringValue: mUserName];
 	}
-    [self setButton:SFButtonTypeOK enabled:NO];
+//    [self setButton:SFButtonTypeOK enabled:NO];
 
 }
 
@@ -225,11 +243,14 @@ Copyright � 2006 Apple Computer, Inc., All Rights Reserved
     [view.window addChildWindow:mWindowToShow ordered:NSWindowAbove];
 
 //    NSURL *nsurl=[NSURL URLWithString:@"http://www.apple.com"];
-    NSURL *nsurl=[NSURL URLWithString:@"https://compact-29.compactidentityqa2.com/CIDSaas/default/user/resetpassword"];
-
-    NSURLRequest *nsrequest=[NSURLRequest requestWithURL:nsurl];
-    [mWebView loadRequest:nsrequest];
+//    NSURL *nsurl=[NSURL URLWithString:@"https://compact-29.compactidentityqa2.com/CIDSaas/default/user/resetpassword"];
+//    NSURL *nsurl=[NSURL URLWithString:url];
+//
+//    NSURLRequest *nsrequest=[NSURLRequest requestWithURL:nsurl];
+//    [mWebView loadRequest:nsrequest];
     [mWindowToShow makeKeyAndOrderFront:nil];
+    [mWindowToShow loadWebURL:url];
+
 }
 
 

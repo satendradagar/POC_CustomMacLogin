@@ -8,18 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		9A160AB224333C0C00E56DE3 /* ChangeInputMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A160AB124333C0C00E56DE3 /* ChangeInputMethod.m */; };
+		9A68445D2434AC52006F9E76 /* URLStorageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A68445B2434AC52006F9E76 /* URLStorageManager.m */; };
 		9AA8DC23242F124E0042289F /* MyInstallerPane.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8DC22242F124E0042289F /* MyInstallerPane.m */; };
 		9AA8DC26242F124E0042289F /* MyInstallerPane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AA8DC24242F124E0042289F /* MyInstallerPane.xib */; };
 		9AA8DC29242F124E0042289F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AA8DC27242F124E0042289F /* Localizable.strings */; };
 		9AA8DC2B242F124E0042289F /* InstallerSections.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9AA8DC2A242F124E0042289F /* InstallerSections.plist */; };
 		9AA8DC2F242F124E0042289F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AA8DC2D242F124E0042289F /* InfoPlist.strings */; };
 		9AA8DC38242F20AF0042289F /* URLValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8DC37242F20AF0042289F /* URLValidator.m */; };
-		9ADD5AA924307192004A66DA /* URLStorageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADD5AA824307192004A66DA /* URLStorageManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9A160AB024333C0C00E56DE3 /* ChangeInputMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangeInputMethod.h; sourceTree = "<group>"; };
 		9A160AB124333C0C00E56DE3 /* ChangeInputMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangeInputMethod.m; sourceTree = "<group>"; };
+		9A68445B2434AC52006F9E76 /* URLStorageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLStorageManager.m; sourceTree = "<group>"; };
+		9A68445C2434AC52006F9E76 /* URLStorageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLStorageManager.h; sourceTree = "<group>"; };
+		9A68445F2434C168006F9E76 /* UninstallProductScript.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = UninstallProductScript.sh; sourceTree = "<group>"; };
+		9A6844602434C168006F9E76 /* Installer_BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Installer_BG.png; sourceTree = "<group>"; };
+		9A6844612434C168006F9E76 /* PreInstallScript.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = PreInstallScript.sh; sourceTree = "<group>"; };
+		9A6844622434C168006F9E76 /* CompactIdentity_Gray1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CompactIdentity_Gray1.png; sourceTree = "<group>"; };
+		9A6844632434C168006F9E76 /* InstallPluginScript.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = InstallPluginScript.sh; sourceTree = "<group>"; };
 		9AA8DC1E242F124E0042289F /* Compact Identity Setup.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Compact Identity Setup.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AA8DC21242F124E0042289F /* MyInstallerPane.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyInstallerPane.h; sourceTree = "<group>"; };
 		9AA8DC22242F124E0042289F /* MyInstallerPane.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyInstallerPane.m; sourceTree = "<group>"; };
@@ -28,12 +35,8 @@
 		9AA8DC2A242F124E0042289F /* InstallerSections.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = InstallerSections.plist; sourceTree = "<group>"; };
 		9AA8DC2C242F124E0042289F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AA8DC2E242F124E0042289F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9AA8DC35242F1C880042289F /* InstallPluginScript.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = InstallPluginScript.sh; sourceTree = SOURCE_ROOT; };
 		9AA8DC36242F20AF0042289F /* URLValidator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLValidator.h; sourceTree = "<group>"; };
 		9AA8DC37242F20AF0042289F /* URLValidator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLValidator.m; sourceTree = "<group>"; };
-		9ADD5AA724307192004A66DA /* URLStorageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLStorageManager.h; sourceTree = "<group>"; };
-		9ADD5AA824307192004A66DA /* URLStorageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLStorageManager.m; sourceTree = "<group>"; };
-		9AFDA0672433977D00084F3C /* PreInstallScript.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = PreInstallScript.sh; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +50,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A68445A2434AC52006F9E76 /* StorageManager */ = {
+			isa = PBXGroup;
+			children = (
+				9A68445B2434AC52006F9E76 /* URLStorageManager.m */,
+				9A68445C2434AC52006F9E76 /* URLStorageManager.h */,
+			);
+			path = StorageManager;
+			sourceTree = "<group>";
+		};
+		9A68445E2434C168006F9E76 /* PackageContents */ = {
+			isa = PBXGroup;
+			children = (
+				9A68445F2434C168006F9E76 /* UninstallProductScript.sh */,
+				9A6844602434C168006F9E76 /* Installer_BG.png */,
+				9A6844612434C168006F9E76 /* PreInstallScript.sh */,
+				9A6844622434C168006F9E76 /* CompactIdentity_Gray1.png */,
+				9A6844632434C168006F9E76 /* InstallPluginScript.sh */,
+			);
+			name = PackageContents;
+			path = Packages/PackageContents;
+			sourceTree = SOURCE_ROOT;
+		};
 		9AA8DC15242F124E0042289F = {
 			isa = PBXGroup;
 			children = (
@@ -70,17 +95,15 @@
 				9AA8DC22242F124E0042289F /* MyInstallerPane.m */,
 				9AA8DC36242F20AF0042289F /* URLValidator.h */,
 				9AA8DC37242F20AF0042289F /* URLValidator.m */,
-				9ADD5AA724307192004A66DA /* URLStorageManager.h */,
-				9ADD5AA824307192004A66DA /* URLStorageManager.m */,
 				9A160AB024333C0C00E56DE3 /* ChangeInputMethod.h */,
 				9A160AB124333C0C00E56DE3 /* ChangeInputMethod.m */,
+				9A68445A2434AC52006F9E76 /* StorageManager */,
 				9AA8DC24242F124E0042289F /* MyInstallerPane.xib */,
 				9AA8DC27242F124E0042289F /* Localizable.strings */,
 				9AA8DC2A242F124E0042289F /* InstallerSections.plist */,
 				9AA8DC2C242F124E0042289F /* Info.plist */,
 				9AA8DC2D242F124E0042289F /* InfoPlist.strings */,
-				9AA8DC35242F1C880042289F /* InstallPluginScript.sh */,
-				9AFDA0672433977D00084F3C /* PreInstallScript.sh */,
+				9A68445E2434C168006F9E76 /* PackageContents */,
 			);
 			path = MacLoginPluginInstaller;
 			sourceTree = "<group>";
@@ -157,9 +180,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AA8DC38242F20AF0042289F /* URLValidator.m in Sources */,
+				9A68445D2434AC52006F9E76 /* URLStorageManager.m in Sources */,
 				9A160AB224333C0C00E56DE3 /* ChangeInputMethod.m in Sources */,
 				9AA8DC23242F124E0042289F /* MyInstallerPane.m in Sources */,
-				9ADD5AA924307192004A66DA /* URLStorageManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +266,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -295,7 +318,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -321,10 +344,10 @@
 		9AA8DC34242F124E0042289F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Installer";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = X6FQ433AWK;
 				INFOPLIST_FILE = MacLoginPluginInstaller/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.corebits.sync-macOS.MacLoginPluginInstaller";

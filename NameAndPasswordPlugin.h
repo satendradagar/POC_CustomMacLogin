@@ -51,7 +51,8 @@ Copyright � 2006 Apple Computer, Inc., All Rights Reserved
 #import <Cocoa/Cocoa.h>
 #import <SecurityInterface/SFAuthorizationPluginView.h>
 #import <WebKit/WebKit.h>
-
+#import "SSHyperLinkButton.h"
+#import "ResetWindow.h"
 
 @interface EXNameAndPassword : SFAuthorizationPluginView
 {
@@ -61,11 +62,11 @@ Copyright � 2006 Apple Computer, Inc., All Rights Reserved
     
     IBOutlet NSView *mPasswordView;
     IBOutlet NSSecureTextField	*mPPasswordSecureTextField;
-    IBOutlet NSWindow *mWindowToShow;
-    IBOutlet WKWebView *mWebView;
+    IBOutlet ResetWindow *mWindowToShow;
     
-//    IBOutlet NSButton *mResetPasswordButton;
-    
+    IBOutlet SSHyperLinkButton *mmIdentityResetButton;
+    IBOutlet SSHyperLinkButton *mmPasswordResetButton;
+
     NSString *mUserName;
     BOOL mUseIPView;
 }

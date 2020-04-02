@@ -492,6 +492,22 @@
 									<key>GID</key>
 									<integer>0</integer>
 									<key>PATH</key>
+									<string>PackageContents/UninstallProductScript.sh</string>
+									<key>PATH_TYPE</key>
+									<integer>1</integer>
+									<key>PERMISSIONS</key>
+									<integer>420</integer>
+									<key>TYPE</key>
+									<integer>3</integer>
+									<key>UID</key>
+									<integer>0</integer>
+								</dict>
+								<dict>
+									<key>CHILDREN</key>
+									<array/>
+									<key>GID</key>
+									<integer>0</integer>
+									<key>PATH</key>
 									<string>var</string>
 									<key>PATH_TYPE</key>
 									<integer>0</integer>
@@ -777,14 +793,14 @@
 				<key>POSTINSTALL_PATH</key>
 				<dict>
 					<key>PATH</key>
-					<string>../InstallPluginScript.sh</string>
+					<string>PackageContents/InstallPluginScript.sh</string>
 					<key>PATH_TYPE</key>
 					<integer>1</integer>
 				</dict>
 				<key>PREINSTALL_PATH</key>
 				<dict>
 					<key>PATH</key>
-					<string>../PreInstallScript.sh</string>
+					<string>PackageContents/PreInstallScript.sh</string>
 					<key>PATH_TYPE</key>
 					<integer>1</integer>
 				</dict>
@@ -849,7 +865,7 @@
 						<key>BACKGROUND_PATH</key>
 						<dict>
 							<key>PATH</key>
-							<string>../Installer_BG.png</string>
+							<string>PackageContents/Installer_BG.png</string>
 							<key>PATH_TYPE</key>
 							<integer>1</integer>
 						</dict>
@@ -864,7 +880,7 @@
 				<key>BACKGROUND_PATH</key>
 				<dict>
 					<key>PATH</key>
-					<string>../Installer_BG.png</string>
+					<string>PackageContents/Installer_BG.png</string>
 					<key>PATH_TYPE</key>
 					<integer>1</integer>
 				</dict>
@@ -987,16 +1003,45 @@
 			<key>INTRODUCTION</key>
 			<dict>
 				<key>LOCALIZATIONS</key>
-				<array/>
+				<array>
+					<dict>
+						<key>LANGUAGE</key>
+						<string>English</string>
+						<key>VALUE</key>
+						<dict>
+							<key>PATH</key>
+							<string>/Users/satendrasingh/Documents/AllProjects/MacLoginScreen/Installer/MacLoginPluginInstaller/Packages/PackageContents/Intro.rtf</string>
+							<key>PATH_TYPE</key>
+							<integer>1</integer>
+						</dict>
+					</dict>
+				</array>
 			</dict>
 			<key>LICENSE</key>
 			<dict>
 				<key>LOCALIZATIONS</key>
-				<array/>
+				<array>
+					<dict>
+						<key>LANGUAGE</key>
+						<string>English</string>
+						<key>VALUE</key>
+						<dict>
+							<key>PATH</key>
+							<string>/Users/satendrasingh/Documents/AllProjects/MacLoginScreen/Installer/MacLoginPluginInstaller/Packages/PackageContents/Licence_Text.rtf</string>
+							<key>PATH_TYPE</key>
+							<integer>0</integer>
+						</dict>
+					</dict>
+				</array>
 				<key>MODE</key>
 				<integer>0</integer>
 			</dict>
 			<key>README</key>
+			<dict>
+				<key>LOCALIZATIONS</key>
+				<array/>
+			</dict>
+			<key>SUMMARY</key>
 			<dict>
 				<key>LOCALIZATIONS</key>
 				<array/>
@@ -1009,7 +1054,7 @@
 						<key>LANGUAGE</key>
 						<string>English</string>
 						<key>VALUE</key>
-						<string>Compact Identity Login Module</string>
+						<string>Compact Identity Login for Password Reset</string>
 					</dict>
 				</array>
 			</dict>
@@ -1203,7 +1248,7 @@
 				</dict>
 			</array>
 			<key>NAME</key>
-			<string>Compact Identity Setup</string>
+			<string>Compact_Identity_Setup</string>
 			<key>PAYLOAD_ONLY</key>
 			<false/>
 			<key>TREAT_MISSING_PRESENTATION_DOCUMENTS_AS_WARNING</key>

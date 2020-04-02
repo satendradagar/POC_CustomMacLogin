@@ -39,26 +39,34 @@
     NSLog(@"****** +++%@", @"didEnterPane");
 
     self.resetPasswordURLField.delegate = self;
-    [self.resetPasswordURLField becomeFirstResponder];
-    [self controlTextDidChange:NSNotification.new];
+    self.resetPasswordTitleField.delegate = self;
+
+//    [self.resetPasswordURLField becomeFirstResponder];
+    [self validateContent];
 
 }
 
 - (BOOL)shouldExitPane:(InstallerSectionDirection)dir{
     [URLStorageManager saveUrl:self.resetPasswordURLField.stringValue andTitle:self.resetPasswordTitleField.stringValue];
-    [ChangeInputMethod updatePluginNameInLogin];
+    self.resetPasswordURLField.delegate = nil;
+    self.resetPasswordTitleField.delegate = nil;
 
+//    [ChangeInputMethod updatePluginNameInLogin];
     return YES;
 }
 
 
-- (IBAction)quitInstaller:(id)sender
-{
-    system("killall -9 \"Installer\"");
-    //[NSApp terminate:nil];
+//- (IBAction)quitInstaller:(id)sender
+//{
+//    system("killall -9 \"Installer\"");
+//    //[NSApp terminate:nil];
+//}
+
+- (void)controlTextDidChange:(NSNotification *) obj{
+    [self validateContent];
 }
 
-- (void)controlTextDidChange:(NSNotification *)obj{
+-(void)validateContent{
     if ([URLValidator validateUrlString:_resetPasswordURLField.stringValue] && [URLValidator validateTitle:_resetPasswordTitleField.stringValue]) {
         self.nextEnabled = YES;
     }
@@ -67,6 +75,5 @@
 
     }
 }
-
 
 @end

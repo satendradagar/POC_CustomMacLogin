@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SSHyperLinkButton : NSButton
 
-//- (IBAction) openURL:(id) sender;
+-(void)updateButtonTitle:(NSString *)title;
 
 @end
 
