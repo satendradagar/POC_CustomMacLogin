@@ -20,7 +20,7 @@ ORIGINAL="/Library/Application Support/compact/original.txt"
 UPDATED="/Library/Application Support/compact/updated.txt"
 if [ -f "$ORIGINAL" ]; then
     echo "$ORIGINAL_LOGIN exist"
-else # Unknown file type
+else
     echo "File Not exist"
 security authorizationdb read system.login.console > $ORIGINAL
 fi
@@ -35,6 +35,6 @@ cp -R /private/UninstallProductScript.sh "/Library/Application Support/compact"
 rm -R /private/CompactIdentityLogin.bundle
 rm /private/UninstallProductScript.sh
 
-#rm -R "$HOME/Library/Application Support/compact/"
+rm -R "$HOME/Library/Application Support/compact/"
 
 #security authorizationdb read system.login.console > "/Library/Application Support/compact/system.login.console.original.txt"

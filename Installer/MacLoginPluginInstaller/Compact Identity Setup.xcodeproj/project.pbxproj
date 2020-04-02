@@ -37,6 +37,7 @@
 		9AA8DC2E242F124E0042289F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9AA8DC36242F20AF0042289F /* URLValidator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLValidator.h; sourceTree = "<group>"; };
 		9AA8DC37242F20AF0042289F /* URLValidator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLValidator.m; sourceTree = "<group>"; };
+		9AC3E9E32435F20800F16D66 /* How It works.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "How It works.rtf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +68,7 @@
 				9A6844612434C168006F9E76 /* PreInstallScript.sh */,
 				9A6844622434C168006F9E76 /* CompactIdentity_Gray1.png */,
 				9A6844632434C168006F9E76 /* InstallPluginScript.sh */,
+				9AC3E9E32435F20800F16D66 /* How It works.rtf */,
 			);
 			name = PackageContents;
 			path = Packages/PackageContents;
