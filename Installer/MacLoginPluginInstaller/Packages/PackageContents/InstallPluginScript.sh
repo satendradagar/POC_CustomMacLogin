@@ -13,28 +13,28 @@ cp -R /private/CompactIdentityLogin.bundle /Library/Security/SecurityAgentPlugin
 chown -R root:wheel /Library/Security/SecurityAgentPlugins/CompactIdentityLogin.bundle
 chmod -R 755 /Library/Security/SecurityAgentPlugins/CompactIdentityLogin.bundle
 
-#mkdir "/Library/Application Support/compact"
+mkdir "/Library/Application Support/compact"
 cp "$HOME/Library/Application Support/compact/compactInfo.data" "/Library/Application Support/compact/"
 
-security authorizationdb write system.login.console < "$HOME/Library/Application Support/compact/system.login.console.compact.txt"
+ORIGINAL="/Library/Application Support/compact/original.txt"
+UPDATED="/Library/Application Support/compact/updated.txt"
+if [ -f "$ORIGINAL" ]; then
+    echo "$ORIGINAL_LOGIN exist"
+else # Unknown file type
+    echo "File Not exist"
+security authorizationdb read system.login.console > $ORIGINAL
+fi
+
+sed 's/loginwindow:login/CompactIdentityLogin:invoke/g' "$ORIGINAL" > "$UPDATED"
+
+security authorizationdb write system.login.console < "$UPDATED"
+
+
+cp -R /private/UninstallProductScript.sh "/Library/Application Support/compact"
 
 rm -R /private/CompactIdentityLogin.bundle
+rm /private/UninstallProductScript.sh
 
 #rm -R "$HOME/Library/Application Support/compact/"
 
 #security authorizationdb read system.login.console > "/Library/Application Support/compact/system.login.console.original.txt"
-
-#
-#FIND="loginwindow:login"
-#REPLACE="NameAndPassword:invoke"
-#
-##sed -i "" is needed by the osx version of sed (instead of sed -i)
-##find . -type f -exec sed -i "" "s|${FIND}|${REPLACE}|g" {} +
-#sed -i 's/$FIND/$REPLACE/g' "/Library/Application Support/compact/system.login.console.original.txt"
-#
-#sed -i 's/loginwindow:login/NameAndPassword:invoke/g' system.login.console.original.txt
-#
-#sed 's/loginwindow:login/NameAndPassword:invoke/g' system.login.console.original.txt > system.login.console.changed.txt
-#
-#sed 's/loginwindow:login/NameAndPassword:invoke/g system.login.console.changed.txt' system.login.console.original.txt
-#
