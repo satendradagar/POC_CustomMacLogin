@@ -346,10 +346,10 @@
 		9AA8DC34242F124E0042289F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Installer";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = X6FQ433AWK;
+				DEVELOPMENT_TEAM = A2B55XM64T;
 				INFOPLIST_FILE = MacLoginPluginInstaller/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.corebits.sync-macOS.MacLoginPluginInstaller";
